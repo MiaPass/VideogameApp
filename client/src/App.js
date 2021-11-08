@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import LandingPage from "./components/Landing Page/LandingPage";
-import Home from "./components/Home/Home";
 import CreatePage from "./components/Create Page/CreatePage";
 import DetailPage from "./components/Detail Page/DetailPage";
+import Home from "./components/Home/Home";
 
 import "./App.css";
 

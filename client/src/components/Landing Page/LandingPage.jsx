@@ -14,7 +14,7 @@ export default function LandingPage() {
       className="all"
     >
       <button className="start">
-        <Link className="link" to={`/home`}>
+        <Link className="link" title="start" to={`/home`}>
           Start
         </Link>
       </button>
