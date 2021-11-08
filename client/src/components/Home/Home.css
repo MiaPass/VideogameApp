@@ -1,0 +1,114 @@
+@font-face {
+  font-family: "retganon";
+  src: url("C:/Users/Mia/Desktop/PI-Videogames-main/client/src/media/fonts/retganon.ttf");
+}
+
+.container {
+  font-family: "retganon";
+  color: #ffffff;
+  display: grid;
+  grid-template-columns: 250px repeat(3, 525px);
+  grid-template-rows: 100px repeat(5, 340px);
+  gap: 0px 20px;
+  grid-auto-flow: row;
+  background-size: contain;
+}
+
+.games {
+  grid-area: 2 / 2 / 7 / 5;
+}
+
+.something {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-area: 1 / 4 / 2 / 5;
+}
+
+.create {
+  grid-area: 2 / 2 / 3 / 3;
+  height: 35px;
+  width: 100px;
+  background: #000000a1;
+  border-style: outset;
+  border-color: #ffffff;
+  border-radius: 20px;
+  justify-content: space-between;
+  line-height: 225%;
+}
+
+.url {
+  text-decoration: none;
+  font-size: larger;
+  color: #ffffff;
+}
+
+.both {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-area: 1 / 3 / 2 / 4;
+}
+
+.search {
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+.pagination {
+  grid-area: 3 / 1 / 4 / 2;
+}
+
+.filtersort {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-area: 2 / 1 / 3 / 2;
+  margin-top: 10%;
+}
+
+.sort {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.filter {
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+select,
+option {
+  text-align: center;
+  font-family: "retganon";
+  font-size: x-large;
+  color: #ffffff;
+  background-color: #4e4e4e;
+  border-radius: 10px;
+  border: #ffffff;
+  width: 150px;
+  height: 35px;
+}
+
+.button {
+  margin-top: 7px;
+  margin-bottom: -3px;
+  height: 35px;
+  width: 80px;
+  color: rgb(255, 255, 255);
+  background: #000000a1;
+  border-style: outset;
+  border-color: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  justify-content: space-between;
+  line-height: 225%;
+}
+
+.img {
+  height: fit-content;
+  width: fit-content;
+}

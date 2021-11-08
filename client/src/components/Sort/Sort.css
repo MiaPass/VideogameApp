@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "retganon";
+  src: url("C:/Users/Mia/Desktop/PI-Videogames-main/client/src/media/fonts/retganon.ttf");
+}
+
+.p {
+  font-size: 30px;
+  font-family: "retganon";
+}
+
+.Sort {
+  align-items: center;
+  text-align: center;
+}

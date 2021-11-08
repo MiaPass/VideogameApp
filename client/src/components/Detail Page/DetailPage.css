@@ -1,0 +1,71 @@
+@font-face {
+  font-family: "Market_Deco";
+  src: url("C:/Users/Mia/Desktop/PI-Videogames-main/client/src/media/fonts/Market_Deco.ttf");
+}
+
+.grey {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROUr9rM58S00GqEIh6H35qS-iL6JiylWwKJWP85v6ZM9JUPryR_q1XTxvu3GQuPJ9obpM&usqp=CAU);
+  background-size: cover;
+  color: #c5ffff;
+  font-family: "Market_Deco";
+  font-size: larger;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr) 0.5fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+}
+
+.img2 {
+  grid-area: 1 / 2 / 2 / 5;
+  width: 80%;
+  height: auto;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+h5 {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.Info {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.7) 25%,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(0, 0, 0, 0.7) 75%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-area: 2 / 2 / 4 / 5;
+}
+
+.button {
+  height: 35px;
+  width: 80px;
+  color: rgb(255, 255, 255);
+  background: #000000a1;
+  border-style: outset;
+  border-color: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  justify-content: space-between;
+  line-height: 225%;
+  font-family: "Market_Deco";
+}
+
+.PROBLEMS_WHIT_GRID {
+  margin-bottom: -10px;
+}
+
+.PROBLEMS_WHIT_GRID_2 {
+  margin-top: -63%;
+}

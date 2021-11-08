@@ -1,0 +1,41 @@
+.SearchBar {
+  display: inline-flex;
+  height: 35px;
+  width: 200px;
+  border-radius: 20px;
+  border: 2px outset #ffffff;
+  background-color: #000000;
+  align-items: center;
+}
+
+.input {
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  padding-left: 10px;
+  margin-right: -10px;
+  outline: none;
+  height: 35px;
+}
+
+.ClearButton {
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  margin-left: 4px;
+  outline: none;
+  height: 35px;
+}
+
+.SearchButton {
+  height: 35px;
+  width: 100px;
+  color: #ffffff;
+  background: #000000a1;
+  border-style: outset;
+  border-color: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  justify-content: space-between;
+  line-height: 225%;
+}
