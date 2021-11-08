@@ -8,13 +8,15 @@ export default function Card(game) {
 
   return (
     <div className="Card">
-      <img src={game.image} alt="Not found Img" />
+      <img src={game.image} alt="Not found Img" title="image" />
 
       <Link className="url" to={`/Detail/${game.id}`}>
         <div className="BottomHalf">
           <div className="info">
-            <h4> {game.name} </h4>
-            <p>{game.genres !== undefined ? genres.join(", ") : "Empty"}</p>
+            <h4 title="name"> {game.name} </h4>
+            <p title="genres">
+              {game.genres !== undefined ? genres.join(", ") : "Empty"}
+            </p>
           </div>
         </div>
       </Link>
