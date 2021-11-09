@@ -12,6 +12,8 @@ export default function CreatePage() {
 
   const { genres, platforms } = useSelector((state) => state);
 
+  const [active, setActive] = useState(false);
+
   const [form, setForm] = useState({
     name: "",
     description: "",
@@ -19,6 +21,7 @@ export default function CreatePage() {
     released: "",
     rating: "",
     img: "",
+    image: "",
     genres: [],
   });
 
@@ -54,6 +57,7 @@ export default function CreatePage() {
 
   const handleSelectGenres = (e) => {
     e.preventDefault();
+    setActive(!active);
     let allGenres = form.genres;
     let selectedG = e.target.value;
     if (!allGenres.includes(selectedG)) {
@@ -67,6 +71,7 @@ export default function CreatePage() {
 
   const handleSelectPlatforms = (e) => {
     e.preventDefault();
+    setActive(!active);
     let allPlatforms = form.platforms;
     let selectedP = e.target.value;
     if (!allPlatforms.includes(selectedP)) {
@@ -124,15 +129,15 @@ export default function CreatePage() {
             <h3>Image*:</h3>
             <p>Upload from local:</p>
             <input
-              name="img"
+              name="image"
               type="file"
-              value={form.img}
+              value={form.image}
               onChange={(e) => handleInput(e)}
             />
             <p>Or from web:</p>
             <input
               name="img"
-              type="url"
+              type="text"
               value={form.img}
               onChange={(e) => handleInput(e)}
             />

@@ -26,7 +26,7 @@
   margin-left: 20%;
   margin-right: 20%;
   column-count: 3;
-  column-rule: 1px solid #bbb;
+  column-rule: 1px solid transparent;
   align-items: center;
 }
 
@@ -36,7 +36,7 @@
   margin-left: 5%;
   margin-right: 5%;
   column-count: 6;
-  column-rule: 1px solid #bbb;
+  column-rule: 1px solid transparent;
 }
 
 hr {
