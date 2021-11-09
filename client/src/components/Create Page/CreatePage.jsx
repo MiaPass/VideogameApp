@@ -125,17 +125,17 @@ export default function CreatePage() {
           />
           <label className="Image">
             <h3>Image*:</h3>
-            <p>Upload from local:</p>
+            {/* <p>Upload from local:</p>
             <input
               name="image"
               type="file"
               value={form.image}
               onChange={(e) => handleInput(e)}
             />
-            <p>Or from web:</p>
+            <p>Or from web:</p> */}
             <input
               name="img"
-              type="text"
+              type="url"
               value={form.img}
               onChange={(e) => handleInput(e)}
             />

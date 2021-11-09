@@ -114,7 +114,7 @@ export default function reducer(state = initialState, { type, payload }) {
         return {
           ...state,
           filteredGames: state.allGames.filter((game) => {
-            return typeof game.id === "string";
+            return typeof game.id !== "number";
           }),
         };
       }

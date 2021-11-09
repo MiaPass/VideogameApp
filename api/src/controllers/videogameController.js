@@ -6,7 +6,7 @@ const { API_KEY } = process.env;
 const getById = async (id) => {
   try {
     // console.log(id);
-    if (!typeof id === "number") {
+    if (typeof id !== "number") {
       let dbData = await Videogame.findOne({
         where: {
           id: id,

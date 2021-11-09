@@ -24,8 +24,8 @@ export default function DetailPage(props) {
     <div className="grey">
       <img className="img2" src={gameDetails.image} alt="Not found Img" />
       <div className="Info">
-        <h3 className="PROBLEMS_WHIT_GRID">{gameDetails.name}</h3>
         <div className="PROBLEMS_WHIT_GRID_2">
+          <h3>{gameDetails.name}</h3>
           <h3>Rating: {gameDetails.rating}</h3>
           <h3>Description: </h3>
           <h5> {gameDetails.description}</h5>

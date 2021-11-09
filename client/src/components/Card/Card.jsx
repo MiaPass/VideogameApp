@@ -15,7 +15,7 @@ export default function Card(game) {
           <div className="info">
             <h4 title="name"> {game.name} </h4>
             <p title="genres">
-              {game.genres[0].name && game.genres !== undefined
+              {game.genres !== undefined
                 ? genres.join(", ")
                 : game.genres.join(", ")}
             </p>
