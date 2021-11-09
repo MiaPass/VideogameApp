@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { Redirect } from "react-router";
 
 import { getGenres, getPlatforms, createGame } from "../../actions/actions";
 
@@ -43,7 +42,6 @@ export default function CreatePage() {
     } else {
       dispatch(createGame(form));
       alert("Game created!");
-      Redirect("/home");
     }
   };
 

@@ -22,7 +22,7 @@ module.exports = (sequelize) => {
         allowNull: true,
       },
       rating: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.DECIMAL,
         allowNull: true,
       },
       image: {
