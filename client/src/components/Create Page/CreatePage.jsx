@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { Redirect } from "react-router";
 
 import { getGenres, getPlatforms, createGame } from "../../actions/actions";
 
@@ -10,8 +11,6 @@ export default function CreatePage() {
   const dispatch = useDispatch();
 
   const { genres, platforms } = useSelector((state) => state);
-
-  let [clicked, setClicked] = useState(false);
 
   const [form, setForm] = useState({
     name: "",
@@ -40,6 +39,8 @@ export default function CreatePage() {
       alert("Description cannot be empty");
     } else {
       dispatch(createGame(form));
+      alert("Game created!");
+      Redirect("/home");
     }
   };
 
@@ -57,11 +58,9 @@ export default function CreatePage() {
     let selectedG = e.target.value;
     if (!allGenres.includes(selectedG)) {
       allGenres.push(selectedG);
-      setClicked({ [e.target.name]: (clicked = true) });
     } else {
       let pos = allGenres.indexOf(selectedG);
       allGenres.splice(pos, 1);
-      setClicked({ [e.target.name]: (clicked = false) });
     }
     console.log(allGenres);
   };
@@ -72,11 +71,9 @@ export default function CreatePage() {
     let selectedP = e.target.value;
     if (!allPlatforms.includes(selectedP)) {
       allPlatforms.push(selectedP);
-      setClicked({ [e.target.name]: (clicked = true) });
     } else {
       let pos = allPlatforms.indexOf(selectedP);
       allPlatforms.splice(pos, 1);
-      setClicked({ [e.target.name]: (clicked = false) });
     }
     console.log(allPlatforms);
   };
