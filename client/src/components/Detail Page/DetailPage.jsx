@@ -10,6 +10,9 @@ export default function DetailPage(props) {
 
   const { gameDetails } = useSelector((state) => state);
 
+  console.log(gameDetails.platforms);
+  console.log(gameDetails.genres);
+
   const {
     match: { params },
   } = props;
@@ -35,20 +38,19 @@ export default function DetailPage(props) {
             {gameDetails.released}
           </h3>
 
-          <h3>
-            Genres:
-            <h5>
-              {gameDetails.genres !== undefined
-                ? gameDetails.genres.map((g) => g.name + ", ")
-                : "None found"}
-            </h5>
-          </h3>
+          <h3>Genres:</h3>
+          <h5>
+            {gameDetails.genres !== undefined
+              ? gameDetails.genres.map((g) => g.name + ", ")
+              : "None found"}
+          </h5>
 
-          {!typeof gameDetails.id === "number" ? (
+          {typeof gameDetails.id !== "number" ? (
             <label>
               <h3>Platforms:</h3>
               <h5>
-                {gameDetails.platforms !== undefined
+                {gameDetails.platforms !== undefined &&
+                gameDetails.platforms !== []
                   ? gameDetails.platforms.map((p) => p.split(" ").join(", "))
                   : "None found"}
               </h5>
@@ -58,7 +60,8 @@ export default function DetailPage(props) {
               <h3>
                 Platforms:
                 <h5>
-                  {gameDetails.platforms !== undefined
+                  {gameDetails.platforms !== undefined &&
+                  gameDetails.platforms !== []
                     ? gameDetails.platforms.join(", ")
                     : "None found"}
                 </h5>

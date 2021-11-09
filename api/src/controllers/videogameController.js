@@ -66,11 +66,11 @@ const createVideogame = async (
       image: image,
     });
     const genre = genres?.map(async (e) => {
-      const genreName = await Genre.findOne({ where: { name: e[0] } });
+      const genreName = await Genre.findOne({ where: { name: e } });
       createGame.addGenres(genreName);
     });
     const platform = platforms?.map(async (e) => {
-      const platformName = await Platform.findOne({ where: { name: e[0] } });
+      const platformName = await Platform.findOne({ where: { name: e } });
       createGame.addGenres(platformName);
     });
     await Promise.all(genre, platform);
